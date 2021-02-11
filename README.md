@@ -1,7 +1,7 @@
 # The Arrow bot
 All Errors are now fixed and the bot is working fine..
 
-![Arrow](https://telegra.ph/file/23c40c8b88da2370e9743.jpg)
+![Arrow](https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg)
 
 
 
