@@ -51,14 +51,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
+අඩේ! {}, මගේ නම ඇවිල්ලා {}↗️!  
 
-I am a Powerful group management bot 🙂  🤿 \nCreated by [My master](https://t.me/Prabha_sha) 
-Based on Project Hexzy written by [★彡ᵖⓡ𝓪Ｂ卄𝒶𝐒𝒽ค彡★](https://t.me/Prabha_sha) 🤩
-You can find my list of available commands with /help.
-Start Me By /start
+මම group manage කරන්න පුළුවන් poweful🦾 බොට් කෙනෙක්🙂. \nමගේ owner කාරයා ඇවිල්ලා [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](https://t.me/DeshadeethThisarana) කියල චරිතයක්😝.
 
-©2021 [★彡ᵖⓡ𝓪Ｂ卄𝒶𝐒𝒽ค彡★](t.me/Prabha_sha) Bot All Rights Reserved
+ඔබට මගේ උපකාරයෙන් ලබා ගත හැකි විධාන ලැයිස්තුව සොයාගන්න /help කියල message එකක් එවන්න 🤪
+
+©2021 [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](t.me/gangoffriends)
+©2021 [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana) All Rights Reserved
 """
 
 HELP_STRINGS = """
