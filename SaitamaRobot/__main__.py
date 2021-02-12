@@ -57,6 +57,8 @@ PM_START_TEXT = """
 
 ඔබට මගේ උපකාරයෙන් ලබා ගත හැකි විධාන ලැයිස්තුව සොයාගන්න /help කියල message එකක් එවන්න 🤪
 
+ඔබට මගේ ඉංග්‍රීසි පරිවර්තන බොට් ද භාවිතා කළ හැකිය. [👉Arrow👈](https://t.me/MrArrow2bot)
+
 ©2021 [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](t.me/gangoffriends)
 ©2021 [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana) All Rights Reserved
 """
