@@ -57,7 +57,7 @@ PM_START_TEXT = """
 
 ඔබට මගේ උපකාරයෙන් ලබා ගත හැකි විධාන ලැයිස්තුව සොයාගන්න /help කියල message එකක් එවන්න 🤪
 
-ඔබට මගේ ඉංග්‍රීසි පරිවර්තන බොට් ද භාවිතා කළ හැකිය. [👉Arrow👈](https://t.me/MrArrow2bot)
+ඔබට මගේ ඉංග්‍රීසි පරිවර්තන බොට් ද භාවිතා කළ හැකිය [👉Arrow👈](https://t.me/MrArrow2bot)
 
 ©2021 [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](t.me/gangoffriends)
 ©2021 [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana) All Rights Reserved
@@ -206,24 +206,24 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                             text=" 🚑 Support Group ",
-                             url="https://t.me/Gangofmafiateam"),
+                             text=" 🧰 Support Group 🧰 ",
+                             url="https://t.me/Gangoffriends"),
                          InlineKeyboardButton(
-                             text=" 🦠 Update Channel ",
-                             url="https://t.me/Mafia_Update")
+                             text=" ⚡️ Developer ⚡️ ",
+                             url="https://t.me/DeshadeethThisarana")
                      ],
                      [
                         InlineKeyboardButton(
-                            text=" ⛑ Help ",
-                            url="https://t.me/HexzyRobot?start=help"),
+                            text=" ⛑ Help ⛑ ",
+                            url="https://t.me/MrArrowbot?start=help"),
                          InlineKeyboardButton(
-                            text=" ⚡️ Developer ",
+                            text=" ⚜️ Supporter ⚜️ ",
                              url="https://t.me/Prabha_sha")        
                        
                      ], 
                      [
                         InlineKeyboardButton(
-                            text=" ➕ Add Hexzy to Your Group 🎨",
+                            text=" ➕ Add Arrow to Your Group ↗️ ",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
                     
