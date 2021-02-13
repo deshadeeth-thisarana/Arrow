@@ -3,7 +3,6 @@ import time
 import re
 from sys import argv
 from typing import Optional
-
 from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK, pbot,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater)
@@ -64,31 +63,36 @@ PM_START_TEXT = """
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm Most Powerfull & I help admins to manage their groups! Have a look at the following for an idea of some of \
-the things I can help you with. 🤿
+හායි, මගේ නම ඇවිල්ලා *{}*.
 
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
+මම ගොඩක් powerful සහ මම adminsලට ඔවුන්ගේ group manage කිරීමට උදව් කරමි😁
+මට ඔබට උදව් කළ හැකි දේවල් පිළිබඳ අදහසක් ලබා ගන්න පහත සඳහන් දෑ බලන්න👇 
+
+*ප්‍රධාන* විධාන:
+ • /help: මෙම මැසේජ් එක private message
+          එකකින් යොමු කරයි.
+ • /help <module name>: අදාල module එක පිළිබඳ තොරතුරු 
+                        private message එකකින් ලබා දෙයි
+ • /donate: [අයිතිකරු](t.me/DeshadeethThisarana) වෙත පරිත්‍යාග කරන්නේ කෙසේද යන්න 
+            පිළිබඳ තොරතුරු!                     
  • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+   • in PM: මොඩියුල පිළිබඳ තොරතුරු ඔබට යොමු කරයි.
+   • in a group: Group එකේ සැකසුම් ඔබට Private Message 
+                 එකකින් යොමු කරයි.
 
 
 {}
-And the following:
+සහ පහත සඳහන් දෑ:
 """.format(
     dispatcher.bot.first_name, ""
-    if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
+    if not ALLOW_EXCL else "\nසියලුම Commands '/' හෝ '!' සමඟ ක්‍රියා කරයි.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/23c40c8b88da2370e9743.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-Senku is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him on [Telegram](t.me/Prabha_sha)  or  [PayPal](paypal.me/PrabhashaPiumantha)."""
+DONATE_STRING = """අඩේ! ඔබට පරිත්‍යාග කිරීමට අවශ්‍ය බව දැනගැනීමට ලැබීම සතුටක්! 
+*Arrow* Heroku's Servers සත්කාරකත්වය දරන අතර මේ වන විට කිසිදු පරිත්‍යාගයක් අවශ්‍ය නොවේ😁 
+නමුත් ඔබට base code එකේ original writer වන [Đ€Ş卄ΔĐ€€Ť卄](t.me/DeshadeethThisarana)ට පරිත්‍යාග කළ හැකිය. 
+ඔහුට සහාය දැක්වීමට ක්‍රම දෙකක් තිබේ. [Telegram](t.me/DeshadeethThisarana) හෝ [Github](https://github.com/deshadeeth-thisarana) මගින් ඔහුට පරිත්‍යාග කළ හැකිය"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -154,7 +158,7 @@ def send_help(chat_id, text, keyboard=None):
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
     # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
-    update.effective_message.reply_text("This person edited a message")
+    update.effective_message.reply_text("මේ හාදයා message එක edit කරා🤨")
     print(update.effective_message)
 
 
@@ -230,7 +234,7 @@ def start(update: Update, context: CallbackContext):
                     ]]))
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
+            "මට ඔබට උදව් කල හැක්කේ කෙසේද? 😊"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
@@ -245,7 +249,7 @@ def error_callback(update: Update, context: CallbackContext):
         # remove update.message.chat_id from conversation list
     except BadRequest:
         print("no nono2")
-        print("BadRequest caught")
+        print("BadRequest අහුවුණා")
         print(error)
 
         # handle malformed requests - read more below!
@@ -329,7 +333,7 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"{module.capitalize()}හි උදව් ලබා ගැනීමට PMහි (Private Message) මා අමතන්න",
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
                         text="Help",
@@ -338,7 +342,7 @@ def get_help(update: Update, context: CallbackContext):
                 ]]))
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "විධාන ලැයිස්තුව ලබා ගැනීමට PMහි (Private Message) මා අමතන්න.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
                     text="Help",
@@ -348,7 +352,7 @@ def get_help(update: Update, context: CallbackContext):
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
-        text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
+        text = "*{}* මොඩියුලය සඳහා ඇති උපකාර මෙන්න:\n  ".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
         send_help(
             chat.id, text,
@@ -368,13 +372,13 @@ def send_settings(chat_id, user_id, user=False):
                                    for mod in USER_SETTINGS.values())
             dispatcher.bot.send_message(
                 user_id,
-                "These are your current settings:" + "\n\n" + settings,
+                "මේවා ඔබගේ වර්තමාන සැකසුම් වේ:" + "\n\n" + settings,
                 parse_mode=ParseMode.MARKDOWN)
 
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any user specific settings available :'(",
+                "විශේෂිත සැකසුම් පරිශීලක නොමැති බව පෙනේ🧐 :'(",
                 parse_mode=ParseMode.MARKDOWN)
 
     else:
@@ -382,15 +386,15 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Which module would you like to check {}'s settings for?"
+                text="{} group එකේ settings සඳහා ඔබ පරීක්ෂා කිරීමට කැමති කුමන module එකද?"
                 .format(chat_name),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)))
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any chat settings available :'(\nSend this "
-                "in a group chat you're admin in to find its current settings!",
+                "Group settings කිසිවක් නොමැති බව පෙනේ 😕:'(\nඔබ admin "
+                "සිටින group එකක එහි වර්තමාන settings සොයා ගැනීමට මෙය යවන්න.",
                 parse_mode=ParseMode.MARKDOWN)
 
 
@@ -408,7 +412,7 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = mod_match.group(1)
             module = mod_match.group(2)
             chat = bot.get_chat(chat_id)
-            text = "*{}* has the following settings for the *{}* module:\n\n".format(escape_markdown(chat.title),
+            text = "*{}* group එකේ *{}* මොඩියුලය සඳහා පහත සැකසුම් ඇත:\n\n".format(escape_markdown(chat.title),
                                                                                      CHAT_SETTINGS[module].__mod_name__) + \
                    CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.reply_text(
@@ -425,8 +429,8 @@ def settings_button(update: Update, context: CallbackContext):
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "ආයුබෝවන්! {} group එක සඳහා settings කිහිපයක් තිබේ - ඉදිරියට ගොස් ඔබ "
+                "කැමති දේ තෝරා ගන්න.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id)))
@@ -436,8 +440,8 @@ def settings_button(update: Update, context: CallbackContext):
             next_page = int(next_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "ආයුබෝවන්! {} group එක සඳහා settings කිහිපයක් තිබේ - ඉදිරියට ගොස් ඔබ "
+                "කැමති දේ තෝරා ගන්න.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id)))
@@ -446,8 +450,8 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                text="Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(escape_markdown(chat.title)),
+                text="ආයුබෝවන්! {} group එක සඳහා settings කිහිපයක් තිබේ - ඉදිරියට ගොස් ඔබ "
+                "කැමති දේ තෝරා ගන්න.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)))
@@ -456,11 +460,11 @@ def settings_button(update: Update, context: CallbackContext):
         bot.answer_callback_query(query.id)
         query.message.delete()
     except BadRequest as excp:
-        if excp.message == "Message is not modified":
+        if excp.message == "පණිවිඩය වෙනස් කර නොමැත":
             pass
-        elif excp.message == "Query_id_invalid":
+        elif excp.message == "විමසූ id එක අවලංගුයි":
             pass
-        elif excp.message == "Message can't be deleted":
+        elif excp.message == "Message එක delete කිරීමට නොහැක😔":
             pass
         else:
             LOGGER.exception("Exception in settings buttons. %s",
@@ -476,7 +480,7 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "මෙම group එකේ settings මෙන්ම ඔබගේ settingsද ලබා ගැනීමට මෙතන click කරන්න👇"
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup([[
@@ -486,7 +490,7 @@ def get_settings(update: Update, context: CallbackContext):
                             context.bot.username, chat.id))
                 ]]))
         else:
-            text = "Click here to check your settings."
+            text = "ඔබගේ settings පරීක්ෂා කිරීමට මෙතන click කරන්න."
 
     else:
         send_settings(chat.id, user.id, True)
