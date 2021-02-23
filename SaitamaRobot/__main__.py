@@ -157,7 +157,7 @@ def send_help(chat_id, text, keyboard=None):
 @run_async
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
-    # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
+    # update.effective_message.reply_text("Hello! _මට_ `markdown` තිබේ", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("මේ හාදයා message එක edit කරා🤨")
     print(update.effective_message)
 
@@ -467,7 +467,7 @@ def settings_button(update: Update, context: CallbackContext):
         elif excp.message == "Message එක delete කිරීමට නොහැක😔":
             pass
         else:
-            LOGGER.exception("Exception in settings buttons. %s",
+            LOGGER.exception("සැකසුම් බොත්තම් වල විශිෂ්ටත්වය. %s",
                              str(query.data))
 
 
@@ -509,8 +509,8 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
-                "You can also donate to the person currently running me "
-                "[here]({})".format(DONATION_LINK),
+                "දැනට මා control කරන පුද්ගලයාට ද ඔබට පරිත්‍යාග කළ හැකිය"
+                "[Click here](t.me/DeshadeethThisarana)",
                 parse_mode=ParseMode.MARKDOWN)
 
     else:
