@@ -50,7 +50,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-අඩේ! {}, මගේ නම ඇවිල්ලා {}↗️!  
+අඩේ! {}, මගේ නම ඇවිල්ලා Arrow↗️!  
 
 මම group manage කරන්න පුළුවන් poweful🦾 බොට් කෙනෙක්🙂. \nමගේ owner කාරයා ඇවිල්ලා [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](https://t.me/DeshadeethThisarana) කියල චරිතයක්😝.
 
@@ -213,16 +213,16 @@ def start(update: Update, context: CallbackContext):
                              text=" 🧰 Support Group 🧰 ",
                              url="https://t.me/Gangoffriends"),
                          InlineKeyboardButton(
-                             text=" ⚡️ Developer ⚡️ ",
-                             url="https://t.me/DeshadeethThisarana")
+                             text="  ",
+                             url="https://t.me/gangoffriendschannel")
                      ],
                      [
                         InlineKeyboardButton(
                             text=" ⛑ Help ⛑ ",
                             url="https://t.me/MrArrowbot?start=help"),
                          InlineKeyboardButton(
-                            text=" ⚜️ Supporter ⚜️ ",
-                             url="https://t.me/Prabha_sha")        
+                            text=" ⚡️ Developer ⚡️ ",
+                             url="https://t.me/DeshadeethThisarana")        
                        
                      ], 
                      [
