@@ -169,8 +169,8 @@ def demote(update: Update, context: CallbackContext) -> str:
         return log_message
     except BadRequest:
         message.reply_text(
-            "Could not demote. I might not be admin, or the admin status was appointed by another"
-            " user, so I can't act upon them!")
+            "Demote කිරීමට නොහැකි විය. මම admin නොවිය හැකිය, නැතහොත් admin status වෙනත් user  විසින් පත් කරන ලදි,"
+            "එබැවින් මට ඔවුන් මත ක්‍රියා කළ නොහැක!")
         return
 
 
