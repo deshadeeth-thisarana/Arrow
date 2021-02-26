@@ -36,8 +36,9 @@ _*Follow the methods carefully*_
 ![Arrow](https://telegra.ph/file/6ca229633ecf5763d539a.jpg)
 
 7) Enter the ID of the group that note down important bot level events (It must be a public group and the bot should be added to that group)
+
 ![Arrow](https://telegra.ph/file/bbdbf9ac5840e0f60c06c.jpg)
- 👆You should enter same id to this two spaces👆
+👆You should enter same id to this two spaces👆
  
 8) Enter TIME_API_KEY required for timezone information (You can get a key from "https://timezonedb.com/api")
 ![Arrow](https://telegra.ph/file/3b7d1d07929fcfb10f885.jpg)
