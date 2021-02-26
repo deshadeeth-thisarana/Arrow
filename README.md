@@ -1,45 +1,46 @@
 # The Arrow bot
 All Errors are now fixed and the bot is working fine..
 
-![Arrow](https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg)
-
-
+![Arrowbot](https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Arrow)
 
 A Modular Group management Bot on Sinhala
 
+#❤Support❤
 
-## THE EASY WAY to Deploy 
+<a href="https://t.me/gangoffriendschannel"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 
+<a href="https://t.me/gangoffriends"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
+# THE EASY WAY to Deploy 
 
-*A message for Experts*
+#*A message for Experts*
      - Always you can change the owner name id and other settings when publishing..
      - The bots owner infomations present at Emilia/Modules/Lang/id.py and en.py.
      - Paste your coffeehouse api to activate your own chatbot.
      - You can remove entry Daisy logo in Main.py.
      - Link your Credit card to Heroku for get extra amount of dynos.
      
-*I am just a learner and this is the code I used as HexzyRobot
+#*I am just a learner and this is the code I used as Rose bot
 ```
 <details>
 <summary>-THE HARD WAY of deploying -</summary>
 
 
 
-## Starting the bot.
+##Starting the bot.
 
 Once you've setup your database and your configuration (see below) is complete, simply run:
 
 `python3 -m tg_bot`
 
 
-## Setting up the bot (Read this before trying to use!):
+##Setting up the bot (Read this before trying to use!):
 Please make sure to use python3.6, as I cannot guarantee everything will work as expected on older python versions!
 This is because markdown parsing is done by iterating through a dict, which are ordered by default in 3.6.
 
-### Configuration
+###Configuration
 
 There are two possible ways of configuring your bot: a config.py file, or ENV variables.
 
@@ -56,9 +57,10 @@ An example `config.py` file could be:
 from tg_bot.sample_config import Config
 
 
-class Development(Config):
+##Class Development(Config):
+    
     OWNER_ID = 254318997  # my telegram ID
-    OWNER_USERNAME = "Prabha_sha"  # my telegram username
+    OWNER_USERNAME = "DeshadeethThisarana"  # my telegram username
     API_KEY = "your bot api key"  # my api key, as provided by the botfather
     SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
     MESSAGE_DUMP = '-1234567890' # some group chat that your bot is a member of
@@ -68,8 +70,9 @@ class Development(Config):
     NO_LOAD = ['translation']
 ```
 
-If you can't have a config.py file (EG on heroku), it is also possible to use environment variables.
-The following env variables are supported:
+##If you can't have a config.py file (EG on heroku), it is also possible to use environment variables.
+##The following env variables are supported:
+ 
  - `ENV`: Setting this to ANYTHING will enable env variables
 
  - `TOKEN`: Your bot token, as a string.
@@ -99,7 +102,7 @@ The following env variables are supported:
  - `BAN_STICKER`: Which sticker to use when banning people.
  - `ALLOW_EXCL`: Whether to allow using exclamation marks ! for commands as well as /.
 
-### Python dependencies
+###Python dependencies
 
 Install the necessary python dependencies by moving to the project directory and running:
 
@@ -107,7 +110,7 @@ Install the necessary python dependencies by moving to the project directory and
 
 This will install all necessary python packages.
 
-### Database
+###Database
 
 If you wish to use a database-dependent module (eg: locks, notes, userinfo, users, filters, welcomes),
 you'll need to have a database installed on your system. I use postgres, so I recommend using it for optimal compatibility.
@@ -148,8 +151,8 @@ You should now be able to build your database URI. This will be:
 Replace sqldbtype with whichever db youre using (eg postgres, mysql, sqllite, etc)
 repeat for your username, password, hostname (localhost?), port (5432?), and db name.
 
-## Modules
-### Setting load order.
+##Modules
+###Setting load order.
 
 The module load order can be changed via the `LOAD` and `NO_LOAD` configuration settings.
 These should both represent lists.
