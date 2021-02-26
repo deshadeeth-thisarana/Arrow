@@ -1,11 +1,12 @@
 # The Arrow bot
+
 All Errors are now fixed and the bot is working fine..
 
 ![Arrowbot](https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Arrow)
 
-A Modular Group management Bot on Sinhala
+*A Modular Group management Bot on Sinhala*
 
 # ❤Support❤
 
@@ -29,7 +30,7 @@ A Modular Group management Bot on Sinhala
 
 
 
-##Starting the bot.
+# Starting the bot.
 
 Once you've setup your database and your configuration (see below) is complete, simply run:
 
