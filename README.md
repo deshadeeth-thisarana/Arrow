@@ -7,7 +7,7 @@ All Errors are now fixed and the bot is working fine..
 
 A Modular Group management Bot on Sinhala
 
-###❤Support❤
+# ❤Support❤
 
 <a href="https://t.me/gangoffriendschannel"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 
