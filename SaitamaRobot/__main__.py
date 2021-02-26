@@ -50,10 +50,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-අඩේ! {}, මගේ නම ඇවිල්ලා Arrow↗️!  
+අඩේ! {}, මගේ නම ඇවිල්ලා {}↗️!  
 
 මම group manage කරන්න පුළුවන් poweful🦾 බොට් කෙනෙක්🙂. \nමගේ owner කාරයා ඇවිල්ලා [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](https://t.me/DeshadeethThisarana) කියල චරිතයක්😝.
-මගේ [owner](t.me/DeshadeethThisarana)ට මාව නිර්මාණය කරන්න full support දීලා තියෙන්නෙ [](t.me/Prabha_sha) කියල පොරක්😇
+මගේ [owner](t.me/DeshadeethThisarana)ට මාව නිර්මාණය කරන්න full support දීලා තියෙන්නෙ [★彡ᵖⓡ𝓪Ｂ卄𝒶𝐒𝒽ค彡★](t.me/Prabha_sha) කියල පොරක්😇
 
 ඔබට මගේ උපකාරයෙන් ලබා ගත හැකි විධාන ලැයිස්තුව සොයාගන්න /help කියල message එකක් එවන්න🤪
 
