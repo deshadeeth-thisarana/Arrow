@@ -23,12 +23,13 @@ _*Follow the methods carefully*_
 ![Arrow](https://telegra.ph/file/5a199b6ee7eb7ce0569a1.jpg)
 
 3) Click "Deploy" button below👇
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Arrow)
 
 4) Give an app name (It must contain only simple letters)
 ![Arrow](https://telegra.ph/file/33a9172ef2e8d19b016bc.jpg)
 
-5) Enter your API_HASH and API_ID (You can get it from "my.telegram.org")
+5) Enter your API_HASH and API_ID (You can get it from "https://my.telegram.org/")
 ![Arrow](https://telegra.ph/file/ef4a1e62b4aeaab1a975d.jpg)
 
 6) Enter CASH_API_KEY required for currency converter (You can get a api_key from "https://www.alphavantage.co/support/#api-key")
