@@ -210,7 +210,7 @@ def start(update: Update, context: CallbackContext):
                              text=" 🧰 Support Group 🧰 ",
                              url="https://t.me/Gangoffriends"),
                          InlineKeyboardButton(
-                             text="  ",
+                             text=" 📺 Update Channel 📺 ",
                              url="https://t.me/gangoffriendschannel")
                      ],
                      [
