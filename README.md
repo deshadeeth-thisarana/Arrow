@@ -4,7 +4,7 @@ All Errors are now fixed and the bot is working fine..
 
 ![Arrowbot](https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg)
 
-*A Modular Group management Bot on Sinhala*
+*A Modular Group management Bot in Sinhala*
 
 
 ## ❤Support❤
