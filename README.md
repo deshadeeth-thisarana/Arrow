@@ -49,8 +49,10 @@ All Errors are now fixed and the bot is working fine..
 7) Enter the ID of the group that note down important bot level events (It must be a public group and the bot should be added to that group)
  
       ![Arrow](https://telegra.ph/file/bbdbf9ac5840e0f60c06c.jpg)
-   👆You should enter same id to this two spaces👆
+   
+       👆You should enter same id to this two spaces👆
  
+
 
 8) Enter TIME_API_KEY required for timezone information (You can get a key from "https://timezonedb.com/api")
 
@@ -91,11 +93,11 @@ All Errors are now fixed and the bot is working fine..
       ![Arrow](https://telegra.ph/file/0e7f33382dff994245b85.jpg)
        
  
-#*A message for Experts*
-   *- Always you can change the owner name id and other settings when publishing..
+# *A message for Experts*
+   *- Always you can change the owner name id and other settings when publishing..*
    *- The bots owner infomations present at Emilia/Modules/Lang/id.py and en.py.*
    *- Paste your coffeehouse api to activate your own chatbot.*
    *- You can remove entry Daisy logo in Main.py.*
    *- Link your Credit card to Heroku for get extra amount of dynos.*
      
-#*I am just a learner and this is the code I used as Rose bot
+# *I am just a learner and this is the code I used as Rose bot*
