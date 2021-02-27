@@ -13,9 +13,9 @@ All Errors are now fixed and the bot is working fine..
 <a href="https://t.me/gangoffriends"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 
-## _*THE EASY WAY TO Deploy*_ 
+## ~_*THE EASY WAY TO Deploy*_~ 
 
-# Follow the methods carefully
+ Follow the methods carefully
 
 1) Create an account at https://heroku.com
 
