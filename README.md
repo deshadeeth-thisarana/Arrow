@@ -4,18 +4,18 @@ All Errors are now fixed and the bot is working fine..
 
 ![Arrowbot](https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg)
 
-
 *A Modular Group management Bot on Sinhala*
 
-# ❤Support❤
+
+## ❤Support❤
 
 <a href="https://t.me/gangoffriendschannel"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-
 <a href="https://t.me/gangoffriends"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
-# THE EASY WAY to Deploy 
 
-_*Follow the methods carefully*_
+## THE EASY WAY to Deploy 
+
+# _*Follow the methods carefully*_
 
 1) Create an account at https://heroku.com
 
@@ -48,7 +48,7 @@ _*Follow the methods carefully*_
 7) Enter the ID of the group that note down important bot level events (It must be a public group and the bot should be added to that group)
  
       ![Arrow](https://telegra.ph/file/bbdbf9ac5840e0f60c06c.jpg)
-           👆You should enter same id to this two spaces👆
+        👆You should enter same id to this two spaces👆
  
 
 8) Enter TIME_API_KEY required for timezone information (You can get a key from "https://timezonedb.com/api")
@@ -63,8 +63,33 @@ _*Follow the methods carefully*_
 
 10) Enter url of the your Heroku app as "https://<your_app_name>.herokuapp.com/" (Enter your app name without "<" and ">"😁)
 
-       ![Arrow](https://telegra.ph/file/86c945c478f693b618217.jpg)
+      ![Arrow](https://telegra.ph/file/86c945c478f693b618217.jpg)
+       
+11) Click "Deploy app" 
 
+
+12) Then click "Manage app"      
+
+      ![Arrow](https://telegra.ph/file/7d3cbab813a9283584233.jpg)
+       
+       
+13) Go to "Resources" and click pencil symbol       
+
+      ![Arrow](https://telegra.ph/file/e30108aca03d14e3c467f.jpg)
+       
+
+14) On the "worker" and click "Confirm"      
+
+      ![Arrow](https://telegra.ph/file/f12271d3925deabf1aa5c.jpg)
+
+
+15) Click "More" and go to "View logs" and check errors
+       
+      ![Arrow](https://telegra.ph/file/91fa7470c6cc995480960.jpg)
+       
+      ![Arrow](https://telegra.ph/file/0e7f33382dff994245b85.jpg)
+       
+ 
 #*A message for Experts*
    - Always you can change the owner name id and other settings when publishing..
    - The bots owner infomations present at Emilia/Modules/Lang/id.py and en.py.
