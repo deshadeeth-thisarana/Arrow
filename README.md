@@ -50,7 +50,7 @@ All Errors are now fixed and the bot is working fine..
  
       ![Arrow](https://telegra.ph/file/bbdbf9ac5840e0f60c06c.jpg)
    
-       👆You should enter same id to this two spaces👆
+     👆You should enter same id to this two spaces👆
  
 
 
@@ -94,10 +94,10 @@ All Errors are now fixed and the bot is working fine..
        
  
 # *A message for Experts*
-   *- Always you can change the owner name id and other settings when publishing..*
-   *- The bots owner infomations present at Emilia/Modules/Lang/id.py and en.py.*
-   *- Paste your coffeehouse api to activate your own chatbot.*
-   *- You can remove entry Daisy logo in Main.py.*
-   *- Link your Credit card to Heroku for get extra amount of dynos.*
+  *- Always you can change the owner name id and other settings when publishing..
+   - The bots owner infomations present at Emilia/Modules/Lang/id.py and en.py.
+   - Paste your coffeehouse api to activate your own chatbot.
+   - You can remove entry Daisy logo in Main.py.
+   - Link your Credit card to Heroku for get extra amount of dynos.*
      
 # *I am just a learner and this is the code I used as Rose bot*
