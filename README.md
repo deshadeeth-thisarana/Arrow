@@ -13,9 +13,9 @@ All Errors are now fixed and the bot is working fine..
 <a href="https://t.me/gangoffriends"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 
-## THE EASY WAY to Deploy 
+## _*THE EASY WAY TO Deploy*_ 
 
-# _*Follow the methods carefully*_
+# Follow the methods carefully
 
 1) Create an account at https://heroku.com
 
@@ -48,7 +48,8 @@ All Errors are now fixed and the bot is working fine..
 7) Enter the ID of the group that note down important bot level events (It must be a public group and the bot should be added to that group)
  
       ![Arrow](https://telegra.ph/file/bbdbf9ac5840e0f60c06c.jpg)
-        👆You should enter same id to this two spaces👆
+        
+     👆You should enter same id to this two spaces👆
  
 
 8) Enter TIME_API_KEY required for timezone information (You can get a key from "https://timezonedb.com/api")
