@@ -81,14 +81,14 @@ def promote(update: Update, context: CallbackContext) -> str:
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
             message.reply_text(
-                "මට මේ group නැති කෙනෙකුව promote කරන්න බැහැ.")
+                "මට මේ group එකේ නැති එකෙක්ව promote කරන්න බැහැ😬.")
         else:
             message.reply_text(".")
         return
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b>!",
+        f"සාර්ථකව promote කරා😁<b>{user_member.user.first_name or user_id}</b>!",
         parse_mode=ParseMode.HTML)
 
     log_message = (
@@ -118,7 +118,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "ඔය ID එක හෝ username එක වැරදි🤦‍♂️ හරියට බලන්න.."
         )
         return
 
@@ -129,16 +129,16 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'creator':
         message.reply_text(
-            "This person CREATED the chat, how would I demote them?")
+            "මේ group එක හදපු කෙනාව මම කොහොමද demote කරන්නෙ යකෝ😠")
         return
 
     if not user_member.status == 'administrator':
-        message.reply_text("Can't demote what wasn't promoted!")
+        message.reply_text("මම admin දීපු නැති අයව මට demote කරන්න බෑ😐")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't demote myself! Get an admin to do it for me.")
+            "මට මාවම demote කරගන්න බෑ මනුස්සයෝ😬. වෙන admin කෙනෙකුට කියල ඒක කරගන්න😏.")
         return
 
     try:
@@ -156,7 +156,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"සාර්ථකව කෙලියා😝 <b>{user_member.user.first_name or user_id}</b>!",
             parse_mode=ParseMode.HTML)
 
         log_message = (
@@ -169,8 +169,8 @@ def demote(update: Update, context: CallbackContext) -> str:
         return log_message
     except BadRequest:
         message.reply_text(
-            "Demote කිරීමට නොහැකි විය. මම admin නොවිය හැකිය, නැතහොත් admin status වෙනත් user  විසින් පත් කරන ලදි,"
-            "එබැවින් මට ඔවුන් මත ක්‍රියා කළ නොහැක!")
+            "මට promote/demote කරන්න බෑ"
+            " මට admin දුන්නොත් මම ඒ වැඩේ කරල දෙන්නම්")
         return
 
 
@@ -182,7 +182,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("Admins cache refreshed!")
+    update.effective_message.reply_text("Admins cache අලුත් කරා😃")
 
 
 @run_async
@@ -205,18 +205,18 @@ def set_title(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "ඔය ID එක හෝ username එක වැරදි🤦‍♂️ හරියට බලන්න.."
         )
         return
 
     if user_member.status == 'creator':
         message.reply_text(
-            "This person CREATED the chat, how can i set custom title for him?")
+            "මේ group එක හදපු කෙනාට මම කොහොමද custom title එකක් දාන්නෙ?😠)
         return
 
     if not user_member.status == 'administrator':
         message.reply_text(
-            "Can't set title for non-admins!\nPromote them first to set custom title!"
+            "Admin නැති කෙනෙකුට කොහොමද title එකක් දාන්නෙ😬\nමුලින්ම admin දීලා ඊට පස්සෙ custom title එකක් දාන්න"
         )
         return
 
