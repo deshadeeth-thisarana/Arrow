@@ -286,7 +286,7 @@ def help_button(update, context):
     try:
         if mod_match:
             module = mod_match.group(1)
-            text = ("Here is the help for the *{}* module:\n".format(
+            text = ("මෙන්න *{}* module එක සඳහා උපකාර:\n".format(
                 HELPABLE[module].__mod_name__) + HELPABLE[module].__help__)
             query.message.edit_text(
                 text=text,
@@ -514,8 +514,7 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
-                "දැනට මා control කරන පුද්ගලයාට ද ඔබට පරිත්‍යාග කළ හැකිය"
-                "/n[Click here](t.me/DeshadeethThisarana)",
+                "දැනට මා control කරන පුද්ගලයාට ද ඔබට පරිත්‍යාග කළ හැකිය /n[Click here](t.me/DeshadeethThisarana)",
                 parse_mode=ParseMode.MARKDOWN)
 
     else:
@@ -544,11 +543,11 @@ def migrate_chats(update: Update, context: CallbackContext):
     else:
         return
 
-    LOGGER.info("Migrating from %s, to %s", str(old_chat), str(new_chat))
+    LOGGER.info("%s සිට %s දක්වා සංක්‍රමණය වීම", str(old_chat), str(new_chat))
     for mod in MIGRATEABLE:
         mod.__migrate__(old_chat, new_chat)
 
-    LOGGER.info("Successfully migrated!")
+    LOGGER.info("සාර්ථකව සංක්‍රමණය විය🙂")
     raise DispatcherHandlerStop
 
 
