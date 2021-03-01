@@ -211,7 +211,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if user_member.status == 'creator':
         message.reply_text(
-            "මේ group එක හදපු කෙනාට මම කොහොමද custom title එකක් දාන්නෙ?😠)
+            "මේ group එක හදපු කෙනාට මම කොහොමද custom title එකක් දාන්නෙ?😠")
         return
 
     if not user_member.status == 'administrator':
