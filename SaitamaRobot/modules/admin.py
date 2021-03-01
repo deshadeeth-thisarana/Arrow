@@ -222,29 +222,29 @@ def set_title(update: Update, context: CallbackContext):
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't set my own title myself! Get the one who made me admin to do it for me."
+            "මට මගේ custom title දාන්න බෑ😔. මට admin දුන්න කෙනාට කියල මගේ title එක දාවන්න."
         )
         return
 
     if not title:
-        message.reply_text("Setting blank title doesn't do anything!")
+        message.reply_text("Title එක හිස් තියල වැඩක් නෑ.")
         return
 
     if len(title) > 16:
         message.reply_text(
-            "The title length is longer than 16 characters.\nTruncating it to 16 characters."
+            "Title length එක characters 16ට වඩා වැඩියි.\nඒක characters 16ට වඩා අඩු කරන්න."
         )
 
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
     except BadRequest:
         message.reply_text(
-            "I can't set custom title for admins that I didn't promote!")
+            "මම admin දුන්නෙ නැති අයට මට title එක දාන්න බෑ.")
         return
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully set title for <code>{user_member.user.first_name or user_id}</code> "
+        f"සාර්ථකව <code>{user_member.user.first_name or user_id}</code>ට title එක දැම්මා😁"
         f"to <code>{html.escape(title[:16])}</code>!",
         parse_mode=ParseMode.HTML)
 
