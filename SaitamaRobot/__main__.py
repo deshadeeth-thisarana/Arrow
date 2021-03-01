@@ -91,7 +91,8 @@ HELP_STRINGS = """
 
 SAITAMA_IMG = "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
 
-DONATE_STRING = """අඩේ! ඔබට පරිත්‍යාග කිරීමට අවශ්‍ය බව දැනගැනීමට ලැබීම සතුටක්! 
+DONATE_STRING = """
+අඩේ! ඔබට පරිත්‍යාග කිරීමට අවශ්‍ය බව දැනගැනීමට ලැබීම සතුටක්! 
 
 *Arrow* Heroku's Servers සත්කාරකත්වය දරන අතර මේ වන විට කිසිදු පරිත්‍යාගයක් අවශ්‍ය නොවේ😁.
 
@@ -529,7 +530,7 @@ def donate(update: Update, context: CallbackContext):
                 "මගේ නිර්මාණකරුට පරිත්‍යාග කිරීම ගැන මම ඔබට PM'ed කර ඇත්තෙමි!")
         except Unauthorized:
             update.effective_message.reply_text(
-                "පරිත්යාග තොරතුරු ලබා ගැනීම සඳහා ප්‍රථමයෙන් PMහි මා අමතන්න.")
+                "පරිත්‍යාග තොරතුරු ලබා ගැනීම සඳහා ප්‍රථමයෙන් PMහි මා අමතන්න.")
 
 
 def migrate_chats(update: Update, context: CallbackContext):
@@ -555,10 +556,10 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online!")
+            dispatcher.bot.sendMessage(f"@GangOfFiends", "මම දැන් online සිටිමි😁")
         except Unauthorized:
             LOGGER.warning(
-                "Bot isnt able to send message to support_chat, go and check!")
+                "Support_chat එකට බොට්ට පණිවිඩ යැවිය නොහැක, ගොස් පරීක්ෂා කරන්න!")
         except BadRequest as e:
             LOGGER.warning(e.message)
 
@@ -589,7 +590,7 @@ def main():
     dispatcher.add_error_handler(error_callback)
 
     if WEBHOOK:
-        LOGGER.info("Using webhooks.")
+        LOGGER.info("Webhooks භාවිතා කිරීම.")
         updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
 
         if CERT_PATH:
@@ -599,7 +600,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Using long polling.")
+        LOGGER.info("Long polling භාවිතා කිරීම.")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
@@ -611,7 +612,7 @@ def main():
 
 
 if __name__ == '__main__':
-    LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
+    LOGGER.info("Modules සාර්ථකව load කර ඇත: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
