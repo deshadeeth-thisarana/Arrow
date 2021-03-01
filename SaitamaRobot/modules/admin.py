@@ -156,7 +156,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"සාර්ථකව කෙලියා😝 <b>{user_member.user.first_name or user_id}</b>!",
+            f"සාර්ථකව <b>{user_member.user.first_name or user_id}</b> කෙලියා😝 ",
             parse_mode=ParseMode.HTML)
 
         log_message = (
