@@ -276,7 +276,7 @@ def pin(update: Update, context: CallbackContext) -> str:
                 prev_message.message_id,
                 disable_notification=is_silent)
         except BadRequest as excp:
-            if excp.message == "Chat_not_modified":
+            if excp.message == "Group එක modify කරල නෑ":
                 pass
             else:
                 raise
@@ -302,7 +302,7 @@ def unpin(update: Update, context: CallbackContext) -> str:
     try:
         bot.unpinChatMessage(chat.id)
     except BadRequest as excp:
-        if excp.message == "Chat_not_modified":
+        if excp.message == "Group එක modify කරල නෑ":
             pass
         else:
             raise
