@@ -44,7 +44,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if not user_id:
         message.reply_text(
-            "ඔය ID එක වැරදි🤦‍♂️ හරියට බලන්න.."
+            "ඔය ID එක හෝ username වැරදි🤦‍♂️ හරියට බලන්න.."
         )
         return
 
@@ -83,12 +83,12 @@ def promote(update: Update, context: CallbackContext) -> str:
             message.reply_text(
                 "මට මේ group එකේ නැති එකෙක්ව promote කරන්න බැහැ😬.")
         else:
-            message.reply_text(".")
+            message.reply_text("ඔය මිනිහා මේ group එකේ නෑනෙ🤔")
         return
 
     bot.sendMessage(
         chat.id,
-        f"සාර්ථකව <b>{user_member.user.first_name or user_id}</b> promote කරා😁",
+        f"<b>{user_member.user.first_name or user_id}</b>ව සාර්ථකව promote කරා😁",
         parse_mode=ParseMode.HTML)
 
     log_message = (
@@ -156,7 +156,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"සාර්ථකව <b>{user_member.user.first_name or user_id}</b> කෙලියා😝 ",
+            f"සාර්ථකව <b>{user_member.user.first_name or user_id}</b>ට කෙලියා😝 ",
             parse_mode=ParseMode.HTML)
 
         log_message = (
@@ -227,7 +227,7 @@ def set_title(update: Update, context: CallbackContext):
         return
 
     if not title:
-        message.reply_text("Title එක හිස් තියල වැඩක් නෑ.")
+        message.reply_text("Title එක හිස් තියන්න බෑ.")
         return
 
     if len(title) > 16:
@@ -244,8 +244,8 @@ def set_title(update: Update, context: CallbackContext):
 
     bot.sendMessage(
         chat.id,
-        f"සාර්ථකව <code>{user_member.user.first_name or user_id}</code>ට title එක දැම්මා😁"
-        f"to <code>{html.escape(title[:16])}</code>!",
+        f"සාර්ථකව <code>{user_member.user.first_name or user_id}</code>ට <code>{html.escape(title[:16])}</code>"
+        f"  කියල title එක දැම්මා😁",
         parse_mode=ParseMode.HTML)
 
 
