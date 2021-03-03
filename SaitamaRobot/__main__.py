@@ -99,7 +99,7 @@ DONATE_STRING = """
 නමුත් ඔබට base code එකේ original writer වන \n[Đ€Ş卄ΔĐ€€Ť卄](t.me/DeshadeethThisarana)ට පරිත්‍යාග කළ හැකිය. 
 ඔහුට සහාය දැක්වීමට ක්‍රම දෙකක් තිබේ. [Telegram](t.me/DeshadeethThisarana) හෝ [Github](https://github.com/deshadeeth-thisarana) මගින් ඔහුට පරිත්‍යාග කළ හැකිය
 """.format(
-    dispatcher.bot.first_name, ""
+    dispatcher.bot.first_name,"""
 
 IMPORTED = {}
 MIGRATEABLE = []
