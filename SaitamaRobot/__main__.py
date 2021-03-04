@@ -225,7 +225,8 @@ def start(update: Update, context: CallbackContext):
                      [
                         InlineKeyboardButton(
                             text=" ⛑ Help ⛑ ",
-                            url="https://t.me/MrArrowbot?start=help"),
+                            url="https://t.me/{}?start=help".format(
+                                context.bot.username)),
                          InlineKeyboardButton(
                             text=" ⚡️ Developer ⚡️ ",
                              url="https://t.me/DeshadeethThisarana")        
@@ -233,9 +234,8 @@ def start(update: Update, context: CallbackContext):
                      ], 
                      [
                         InlineKeyboardButton(
-                            text=" ➕ Add Arrow to Your Group ↗️ ",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username)),
+                            text=" ➕ Add me to Your Group ↗️ ",
+                            url="t.me/MrArrowbot?startgroup=true"),
                     
                     ]]))
     else:
