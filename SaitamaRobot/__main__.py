@@ -515,7 +515,8 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
-                "දැනට මා control කරන පුද්ගලයාට ද ඔබට පරිත්‍යාග කළ හැකිය /n[Click here](t.me/DeshadeethThisarana)",
+                "දැනට මා control කරන පුද්ගලයාට ද ඔබට පරිත්‍යාග කළ හැකිය" 
+                 " 👉[Click here](t.me/DeshadeethThisarana)👈",
                 parse_mode=ParseMode.MARKDOWN)
 
     else:
@@ -527,7 +528,7 @@ def donate(update: Update, context: CallbackContext):
                 disable_web_page_preview=True)
 
             update.effective_message.reply_text(
-                "මගේ නිර්මාණකරුට පරිත්‍යාග කිරීම ගැන මම ඔබට PM'ed කර ඇත්තෙමි!")
+                "මගේ නිර්මාණකරුට පරිත්‍යාග කිරීම ගැන මම ඔබට PM message එකක් send කර ඇත්තෙමි!")
         except Unauthorized:
             update.effective_message.reply_text(
                 "පරිත්‍යාග තොරතුරු ලබා ගැනීම සඳහා ප්‍රථමයෙන් PMහි මා අමතන්න.")
