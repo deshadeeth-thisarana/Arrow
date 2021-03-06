@@ -181,7 +181,7 @@ def new_member(update: Update, context: CallbackContext):
                     reply_to_message_id=reply)
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
-                               f"Bot Owner just joined the chat")
+                               f"[Bot Owner](t.me/DeshadeethThisarana) just joined the chat")
                 continue
 
             # Welcome Devs
@@ -366,7 +366,7 @@ def new_member(update: Update, context: CallbackContext):
                         f"{new_join_mem}, click the button below to prove you're human.\nYou have 120 seconds.",
                         reply_markup=InlineKeyboardMarkup([{
                             InlineKeyboardButton(
-                                text="Yes, I'm human.",
+                                text="Yes, I'm human🙋‍♂️",
                                 callback_data=f"user_join_({new_mem.id})",
                             )
                         }]),
@@ -959,14 +959,14 @@ WELC_HELP_TXT = (
     "go. Note that group ids are usually preceded by a `-` sign; this is required, so please don't "
     "remove it.\n"
     "You can even set images/gifs/videos/voice messages as the welcome message by "
-    "replying to the desired media, and calling `/setwelcome`.")
+    "replying to the desired media, and calling /setwelcome.")
 
 WELC_MUTE_HELP_TXT = (
     "You can get the bot to mute new people who join your group and hence prevent spambots from flooding your group. "
     "The following options are possible:\n"
-    "• `/welcomemute soft`*:* restricts new members from sending media for 24 hours.\n"
-    "• `/welcomemute strong`*:* mutes new members till they tap on a button thereby verifying they're human.\n"
-    "• `/welcomemute off`*:* turns off welcomemute.\n"
+    "• /welcomemute soft*:* restricts new members from sending media for 24 hours.\n"
+    "• /welcomemute strong*:* mutes new members till they tap on a button thereby verifying they're human.\n"
+    "• /welcomemute off*:* turns off welcomemute.\n"
     "*Note:* Strong mode kicks a user from the chat if they dont verify in 120seconds. They can always rejoin though"
 )
 
@@ -1011,22 +1011,22 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 *Admins only:*
- • `/welcome <on/off>`*:* enable/disable welcome messages.
- • `/welcome`*:* shows current welcome settings.
- • `/welcome noformat`*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
- • `/goodbye`*:* same usage and args as `/welcome`.
- • `/setwelcome <sometext>`*:* set a custom welcome message. If used replying to media, uses that media.
- • `/setgoodbye <sometext>`*:* set a custom goodbye message. If used replying to media, uses that media.
- • `/resetwelcome`*:* reset to the default welcome message.
- • `/resetgoodbye`*:* reset to the default goodbye message.
- • `/cleanwelcome <on/off>`*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
- • `/welcomemutehelp`*:* gives information about welcome mutes.
- • `/cleanservice <on/off>`*:* deletes telegrams welcome/left service messages. 
+ • /welcome `<on/off>`*:* enable/disable welcome messages.
+ • /welcome*:* shows current welcome settings.
+ • /welcome noforma`*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
+ • /goodbye*:* same usage and args as `/welcome`.
+ • /setwelcome `<sometext>`*:* set a custom welcome message. If used replying to media, uses that media.
+ • /setgoodbye `<sometext>`*:* set a custom goodbye message. If used replying to media, uses that media.
+ • /resetwelcome*:* reset to the default welcome message.
+ • /resetgoodbye*:* reset to the default goodbye message.
+ • /cleanwelcome `<on/off>`*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
+ • /welcomemutehelp*:* gives information about welcome mutes.
+ • /cleanservice `<on/off>`*:* deletes telegrams welcome/left service messages. 
  *Example:*
 user joined chat, user left chat.
 
 *Welcome markdown:* 
- • `/welcomehelp`*:* view more formatting information for custom welcome/goodbye messages.
+ • /welcomehelp*:* view more formatting information for custom welcome/goodbye messages.
 """
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members,
@@ -1066,7 +1066,7 @@ dispatcher.add_handler(CLEAN_SERVICE_HANDLER)
 dispatcher.add_handler(BUTTON_VERIFY_HANDLER)
 dispatcher.add_handler(WELCOME_MUTE_HELP)
 
-__mod_name__ = "Greetings"
+__mod_name__ = "🙏Greetings🙏"
 __command_list__ = []
 __handlers__ = [
     NEW_MEM_HANDLER,
