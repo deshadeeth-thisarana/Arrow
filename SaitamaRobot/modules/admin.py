@@ -332,7 +332,7 @@ def invite(update: Update, context: CallbackContext):
             update.effective_message.reply_text(invitelink)
         else:
             update.effective_message.reply_text(
-                "I don't have access to the invite link, try changing my permissions!"
+                "මට invite link එක share කරන්න permission දීලා නෑ😏. 'Invite users via invite link' කියන permission එක දුන්නොත් මම ඒක කරල දෙන්නම්😁"
             )
     else:
         update.effective_message.reply_text(
