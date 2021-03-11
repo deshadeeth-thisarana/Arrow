@@ -44,7 +44,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if not user_id:
         message.reply_text(
-            "ඔය ID එක හෝ username වැරදි🤦‍♂️ හරියට බලන්න.."
+            "ඔය ID එක හරි username හරි වැරදි🤦‍♂️ හරියට බලන්න.."
         )
         return
 
@@ -118,7 +118,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "ඔය ID එක හෝ username එක වැරදි🤦‍♂️ හරියට බලන්න.."
+            "ඔය ID එක හරි username එක හරි වැරදි🤦‍♂️ හරියට බලන්න.."
         )
         return
 
@@ -205,7 +205,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "ඔය ID එක හෝ username එක වැරදි🤦‍♂️ හරියට බලන්න.."
+            "ඔය ID එක හරි username එක හරි වැරදි🤦‍♂️ හරියට බලන්න.."
         )
         return
 
@@ -350,7 +350,7 @@ def adminlist(update, context):
 
     if update.effective_message.chat.type == "private":
         send_message(update.effective_message,
-                     "This command only works in Groups.")
+                     "මේ command එක group වලදි විතරයි වැඩ කරන්නේ😐.")
         return
 
     chat = update.effective_chat
@@ -376,7 +376,7 @@ def adminlist(update, context):
         custom_title = admin.custom_title
 
         if user.first_name == '':
-            name = "☠ Deleted Account"
+            name = "☠ Delete කරපු account එකක්"
         else:
             name = "{}".format(
                 mention_html(
@@ -392,7 +392,7 @@ def adminlist(update, context):
         #if user.username:
         #    name = escape_markdown("@" + user.username)
         if status == "creator":
-            text += "\n 👑 Creator:"
+            text += "\n 👑 Group එකේ creator:"
             text += "\n<code> • </code>{}\n".format(name)
 
             if custom_title:
@@ -409,7 +409,7 @@ def adminlist(update, context):
         custom_title = admin.custom_title
 
         if user.first_name == '':
-            name = "☠ Deleted Account"
+            name = "☠ Delete කරපු account එකක්"
         else:
             name = "{}".format(
                 mention_html(
@@ -454,18 +454,18 @@ def adminlist(update, context):
 
 
 __help__ = """
- • /admins*:* list of admins in the chat
+ • /admins*:* Group එකේ සිටින admin ලැයිස්තුව
 
 *Admins only:*
- • /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
- • /unpin*:* unpins the currently pinned message
- • /invitelink*:* gets invitelink
- • /promote*:* promotes the user replied to
- • /demote*:* demotes the user replied to
- • /title <title here>*:* sets a custom title for an admin that the bot promoted
- • /admincache*:* force refresh the admins list
- • /zombies *:* Scan deleted accounts
- • /zombies clean*:* Cleans deleted accounts
+ • /pin*:* Reply කරපු msg එක silently pin කරන්න - Usersලට notify වෙන විදියට pin කරන්න `'loud'` හෝ `'notify'` කියල msg එකට add කරන්න
+ • /unpin*:*  දැනට pin කරල තියෙන msg unpin කරන්න 
+ • /invitelink*:* Invitelink එක ලබාගන්න
+ • /promote*:* Reply කරපු user promote කරන්න
+ • /demote*:* Reply කරපු user demote කරන්න
+ • /title `<title here>`*:* sets a custom title for an admin that the bot promoted
+ • /admincache*:* Admins list එක refresh කරන්න
+ • /zombies *:* Delete කරපු accounts scan කරන්න
+ • /zombies clean*:* Delete කරපු accounts ඉවත් කරන්න
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
@@ -491,7 +491,7 @@ dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 
-__mod_name__ = "👮‍♀️Admin👮‍♀️"
+__mod_name__ = "Admin👮‍♀️"
 __command_list__ = [
     "adminlist", "admins", "invitelink", "promote", "demote", "admincache"
 ]
