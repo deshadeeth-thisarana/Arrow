@@ -59,7 +59,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
             options = [
                 '{} ආපහු ආවෝ 🥳', '{} ආපහු ඇවිල්ලා', '{} දැන් group එකේ ඉන්නෝ!',
                 '{} is awake!', '{} ආපහු online ඇවිල්ලා🤠', '{} අන්තිම වතාවට ඇවිල්ලා😐',
-                'Welcome back! {}', 'Where is {}?\nIn the chat!'
+                'සාදරයෙන් පිළිගන්නවා {}', '{} කොහේද ඉන්නේ?\nGroup එකේ ඉන්නේ'
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
@@ -135,9 +135,9 @@ def check_afk(update, context, user_id, fst_name, userc_id):
 
 
 __help__ = """
- • /afk <reason>*:* mark yourself as AFK(away from keyboard).
- • brb <reason>*:* same as the afk command - but not a command.
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+ • /afk <reason>*:* ඔබ AFK ලෙස පෙන්වීම (keyboard එකෙන් ඉවත්වීම).
+ • brb <reason>*:* Afk command එකට සමානයි - නමුත් command එකක් නෙවෙයි.
+AFK ලෙස පෙන්වන විට, any mentions will be replied to with a message to say you're not available!
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
@@ -151,7 +151,7 @@ dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
 dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
 dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
 
-__mod_name__ = "🏃‍♂️AFK🏃‍♂️"
+__mod_name__ = "AFK🏃‍♂️"
 __command_list__ = ["afk"]
 __handlers__ = [(AFK_HANDLER, AFK_GROUP), (AFK_REGEX_HANDLER, AFK_GROUP),
                 (NO_AFK_HANDLER, AFK_GROUP),
