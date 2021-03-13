@@ -79,7 +79,7 @@ def totranslate(update: Update, context: CallbackContext):
             "Reply to messages or write messages from other languages ​​for translating into the intended language\n\n"
             "Example: `/tr en-ml` to translate from English to Malayalam\n"
             "Or use: `/tr ml` for automatic detection and translating it into Malayalam.\n"
-            "See [List of Language Codes](t.me/SenkuUpdates/20) for a list of language codes.",
+            "See [List of Language Codes](https://t.me/gangoffriendschannel/9) for a list of language codes.",
             parse_mode="markdown",
             disable_web_page_preview=True)
     except ValueError:
@@ -100,6 +100,6 @@ TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], totranslate)
 
 dispatcher.add_handler(TRANSLATE_HANDLER)
 
-__mod_name__ = "Translator"
+__mod_name__ = "Translator🔁"
 __command_list__ = ["tr", "tl"]
 __handlers__ = [TRANSLATE_HANDLER]
