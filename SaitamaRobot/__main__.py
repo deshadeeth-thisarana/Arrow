@@ -89,7 +89,7 @@ HELP_STRINGS = """
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nසියලුම Commands '/' හෝ '!' සමඟ ක්‍රියා කරයි.\n")
 
-SAITAMA_IMG = [IMG](ARROW_IMG)
+SAITAMA_IMG = IMG(ARROW_IMG)
 
 DONATE_STRING = """
 අඩේ! ඔබට පරිත්‍යාග කිරීමට අවශ්‍ය බව දැනගැනීමට ලැබීම සතුටක්! 
