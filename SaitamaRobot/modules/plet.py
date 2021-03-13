@@ -61,9 +61,9 @@ PLET_HANDLER = DisableAbleCommandHandler("plet", plet)
 dispatcher.add_handler(PLET_HANDLER)
 
 __help__ = """
-   `/plet` *:-* text get funny emojify
+   /plet *:-* text covert into a funny emojify
 """
-__mod_name__ = "Plet"
+__mod_name__ = "Plet🤪"
 
 __handlers__ = [
     PLET_HANDLER
