@@ -3,7 +3,7 @@ import time
 import re
 from sys import argv
 from typing import Optional
-from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER, ARROW_IMG,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK, pbot,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater)
 # needed to dynamically load modules
@@ -89,7 +89,7 @@ HELP_STRINGS = """
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nසියලුම Commands '/' හෝ '!' සමඟ ක්‍රියා කරයි.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
+SAITAMA_IMG = [IMG](ARROW_IMG)
 
 DONATE_STRING = """
 අඩේ! ඔබට පරිත්‍යාග කිරීමට අවශ්‍ය බව දැනගැනීමට ලැබීම සතුටක්! 
