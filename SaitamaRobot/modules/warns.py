@@ -491,7 +491,7 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- • /warns <userhandle>*:* get a user's number, and reason, of warns.
+ • /warns `<userhandle>`*:* get a user's number, and reason, of warns.
  • /warnlist*:* list of all current warning filters
 
 *Admins only:*
@@ -503,7 +503,7 @@ __help__ = """
  • /strongwarn `<on/yes/off/no>`*:* If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
 """
 
-__mod_name__ = "‼️Warnings⁉️"
+__mod_name__ = "Warnings⁉️"
 
 WARN_HANDLER = CommandHandler("warn", warn_user, filters=Filters.group)
 RESET_WARN_HANDLER = CommandHandler(["resetwarn", "resetwarns"],
