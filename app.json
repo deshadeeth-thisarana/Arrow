@@ -33,6 +33,11 @@
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
          "value": ""
+       },
+      "ARROW_IMG": {
+         "description": "Link of the image of your bots welcome message.",
+         "required": true,
+         "value": "https://telegra.ph/file/2ebd3d2bf6db41a457bfd.jpg"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
